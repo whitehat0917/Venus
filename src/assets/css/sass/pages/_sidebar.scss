@@ -1,0 +1,51 @@
+.logo-wrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: 8vh;
+    img{
+        width: 65%;
+    }
+}
+
+.menu-wrapper{
+    flex-direction: column;
+    margin-top: 12vh;
+    li{
+        padding: 7px;
+        display: flex;
+        margin-bottom: 5vh;
+        &.active{
+            background-color: #252a4a;
+        }
+        a{
+            display: flex;
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            &:hover, &.menu-active{
+                color: #f8b94b;
+            }
+            img{
+                width: 1.3rem;
+                margin: 0 1.3rem;
+            }
+        }
+    }
+}
+
+main{
+    padding: 0 30px;
+    width: 87.5%;
+    max-width: calc(100% - 125px);
+    height: 100%;
+    float: left;
+    overflow: hidden auto;
+    @media (min-width: 0px) and (max-width: 1268px) {
+        padding: 0;
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        max-width: 100%;
+    }
+}

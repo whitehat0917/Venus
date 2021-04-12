@@ -1,0 +1,31 @@
+.react-tabs{
+    ul.react-tabs__tab-list{
+        display: flex;
+        padding: 0;
+        li{
+            display: flex;
+            width: 28%;
+            min-height: 40px;
+            font-size: 1rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            color: #5e5f6a;
+            cursor: pointer;
+            @media screen and (max-width: 768px) {
+                width: 33%;
+            }
+            &.react-tabs__tab--selected{
+                font-weight: bold;
+                background-color: #252a4a;
+                color: white;
+            }
+            &.react-tabs__tab--selected.no-background{
+                font-weight: bold;
+                font-size: 17px;
+                background-color: transparent;
+                color: white;
+            }
+        }
+    }
+}

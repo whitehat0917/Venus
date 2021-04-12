@@ -7,7 +7,7 @@ import { Box, Flex, Text } from 'rebass'
 import { withRouter } from 'react-router-dom'
 
 import theme from '../../../../theme'
-import { ChumHumText, CustomLink, FlexLayout } from '../../../../components/styles'
+import { VenusText, CustomLink, FlexLayout } from '../../../../components/styles'
 
 const List = styled(Box)`
   -webkit-overflow-scrolling: touch;
@@ -66,18 +66,18 @@ const ListItem = ({ item }) => {
       <DashGrid>
         <DataText area="rank">
           <FlexLayout width="100%" justify="flex-start">
-            <ChumHumText margin="0 10px 0 0">{item.rank}</ChumHumText>
-            <ChumHumText>{item.address}</ChumHumText>
+            <VenusText margin="0 10px 0 0">{item.rank}</VenusText>
+            <VenusText>{item.address}</VenusText>
           </FlexLayout>
         </DataText>
         <DataText area="votes">
-          <ChumHumText>{item.votes}</ChumHumText>
+          <VenusText>{item.votes}</VenusText>
         </DataText>
         <DataText area="voteWeight">
-          <ChumHumText>{item.voteWeight}</ChumHumText>
+          <VenusText>{item.voteWeight}</VenusText>
         </DataText>
         <DataText area="proposalsVoted">
-          <ChumHumText>{item.proposalsVoted}</ChumHumText>
+          <VenusText>{item.proposalsVoted}</VenusText>
         </DataText>
       </DashGrid>
     </CustomLink>

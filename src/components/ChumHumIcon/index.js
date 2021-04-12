@@ -9,7 +9,7 @@ const IconContainer = styled.div`
   margin-right: ${props => props.marginRight};
 `
 
-const ChumHumIcon = ({ icon, width = "24px", height = "24px", marginLeft = "0", marginRight = "0" }) => {
+const VenusIcon = ({ icon, width = "24px", height = "24px", marginLeft = "0", marginRight = "0" }) => {
   return (
     <IconContainer marginLeft={marginLeft} marginRight={marginRight}>
       <img src={icon} alt="Chum" style={{width: width, height: height}} />
@@ -17,4 +17,4 @@ const ChumHumIcon = ({ icon, width = "24px", height = "24px", marginLeft = "0", 
   )
 }
 
-export default ChumHumIcon
+export default VenusIcon

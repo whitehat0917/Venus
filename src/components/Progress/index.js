@@ -21,7 +21,7 @@ const InnerProgress = styled.div`
   top: 0;
 `
 
-const ChumHumProgress = ({ percent = 0, width = "200px", progressColor = theme.colorYellow, backgroundColor = theme.colorGrayLightest}) => {
+const VenusProgress = ({ percent = 0, width = "200px", progressColor = theme.colorYellow, backgroundColor = theme.colorGrayLightest}) => {
   const innerWidth = String(percent) + "%";
 
   return (
@@ -31,4 +31,4 @@ const ChumHumProgress = ({ percent = 0, width = "200px", progressColor = theme.c
   )
 }
 
-export default ChumHumProgress
+export default VenusProgress

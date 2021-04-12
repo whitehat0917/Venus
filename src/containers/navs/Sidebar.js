@@ -5,7 +5,7 @@ import { NavLink, useLocation, Redirect } from 'react-router-dom';
 import { useMedia } from 'react-use';
 
 import DropDownMenu from './dropdown'
-import { FlexLayout, ChumHumText, Container } from '../../components/styles';
+import { FlexLayout, VenusText, Container } from '../../components/styles';
 import { SidebarContainer, SidebarWrapper } from './styles';
 
 import menuItems from '../../constants/menu';
@@ -93,18 +93,18 @@ const Sidebar = () => {
               }
             </Nav>
             <FlexLayout width="100%" direction="column" position="absolute" bottom="30px">
-              <ChumHumText fontSize="1.2rem">
+              <VenusText fontSize="1.2rem">
                 $5,160,007,735.56
-              </ChumHumText>
-              <ChumHumText fontSize="1.2rem" color="#a1a1a1">
+              </VenusText>
+              <VenusText fontSize="1.2rem" color="#a1a1a1">
                 Total Value Locked
-              </ChumHumText>
-              <ChumHumText fontSize="1.2rem" margin="20px 0 0 0">
+              </VenusText>
+              <VenusText fontSize="1.2rem" margin="20px 0 0 0">
                 163,567,192
-              </ChumHumText>
-              <ChumHumText fontSize="1.2rem" color="#a1a1a1">
+              </VenusText>
+              <VenusText fontSize="1.2rem" color="#a1a1a1">
                 Total VAI Minted
-              </ChumHumText>
+              </VenusText>
             </FlexLayout>
           </SidebarWrapper>
         }

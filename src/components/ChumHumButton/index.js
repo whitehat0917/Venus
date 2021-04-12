@@ -23,7 +23,7 @@ const ButtonContainer = styled.div`
   }
 `
 
-const ChumHumButton = ({ text, width="100%", height="auto", disabled, handleClick }) => {
+const VenusButton = ({ text, width="100%", height="auto", disabled, handleClick }) => {
   return (
     <ButtonContainer width={width} height={height}>
       <button className={disabled ? 'button-disabled' : ''} onClick={handleClick}>
@@ -33,4 +33,4 @@ const ChumHumButton = ({ text, width="100%", height="auto", disabled, handleClic
   )
 }
 
-export default ChumHumButton
+export default VenusButton

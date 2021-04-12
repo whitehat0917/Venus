@@ -8,7 +8,7 @@ import TransactionList from './transactionList'
 import VotingList from './votingList'
 import {
   FlexLayout,
-  ChumHumText,
+  VenusText,
   PageTitle,
   Container,
   Divider,
@@ -18,9 +18,9 @@ import {
 import { Address, ExternalAddress } from './style'
 import BackButton from '../../../../components/BackButton';
 import CopyHelper from '../../../../components/Copy'
-import ChumHumProgress from '../../../../components/Progress';
+import VenusProgress from '../../../../components/Progress';
 import theme from '../../../../theme';
-import ChumHumIcon from '../../../../components/ChumHumIcon';
+import VenusIcon from '../../../../components/VenusIcon';
 import gotoIcon from '../../../../assets/img/icons/goto.svg'
 import upArrowIcon from '../../../../assets/img/green-arrow.svg';
 import downArrowIcon from '../../../../assets/img/red-arrow.svg';
@@ -98,8 +98,8 @@ const votingData = [
 //         <Check size={10}></Check>
 //       </CircleDiv>
 //       <FlexLayout direction="column" align="flex-start" padding="10px" style={{flex: "1"}}>
-//         <ChumHumText>{item.label}</ChumHumText>
-//         <ChumHumText color={theme.colorSecondary}>{item.date}</ChumHumText>
+//         <VenusText>{item.label}</VenusText>
+//         <VenusText color={theme.colorSecondary}>{item.date}</VenusText>
 //       </FlexLayout>
 //     </FlexLayout>
 //   )
@@ -122,8 +122,8 @@ const votingData = [
 // const VoteItem = ({item}) => {
 //   return (
 //     <FlexLayout justify="space-between" height="46px" borderBottom={`1px solid ${theme.bgActive}`} borderTop={`1px solid ${theme.bgActive}`}>
-//       <ChumHumText>{item.address}</ChumHumText>
-//       <ChumHumText>{item.votes}</ChumHumText>
+//       <VenusText>{item.address}</VenusText>
+//       <VenusText>{item.votes}</VenusText>
 //     </FlexLayout>
 //   )
 // }
@@ -156,7 +156,7 @@ const Details = ({ address }) => {
         <Col md={below1440 ? 12 : 5}>
           <Container>
             <FlexLayout direction="column" align="flex-start">
-              <ChumHumText fontSize="17px" fontWeight="900" margin="0 0 5px 0">0x1c...6d7e</ChumHumText>
+              <VenusText fontSize="17px" fontWeight="900" margin="0 0 5px 0">0x1c...6d7e</VenusText>
               <FlexLayout justify="space-between" align="center" width="100%">
                 <Address to={{ pathname: "https://bscscan.com/address/0x0BF82CE1BDE549DaFadae4472b3398dd70E94F13" }} target="_blank">
                   0x1ca3ac3686071be692be7f1fbecd668641476d7e
@@ -170,52 +170,52 @@ const Details = ({ address }) => {
       <Row>
         <Col md={below960 ? 12 : 5}>
           <Container>
-            <ChumHumText fontSize="17px" fontWeight="900" margin="0 0 25px 0" align="left">
+            <VenusText fontSize="17px" fontWeight="900" margin="0 0 25px 0" align="left">
               Holding
-            </ChumHumText>
+            </VenusText>
             <Divider />
             <FlexLayout padding="20px 0 30px 0" direction="column" align="flex-start">
-              <ChumHumText fontSize="16px" fontWeight="normal" color={theme.colorSecondary} margin="0 0 10px 0">
+              <VenusText fontSize="16px" fontWeight="normal" color={theme.colorSecondary} margin="0 0 10px 0">
                 Venus Balance
-              </ChumHumText>
-              <ChumHumText fontSize="20px" fontWeight="700">
+              </VenusText>
+              <VenusText fontSize="20px" fontWeight="700">
                 0
-              </ChumHumText>
+              </VenusText>
             </FlexLayout>
             <Divider />
             <FlexLayout padding="20px 0 30px 0" direction="column" align="flex-start">
               <FlexLayout justify="space-between" align="flex-start" margin="0 0 10px 0">
                 <FlexLayout direction="column" align="flex-start">
-                  <ChumHumText fontSize="16px" fontWeight="normal" color={theme.colorSecondary} margin="0 0 10px 0">
+                  <VenusText fontSize="16px" fontWeight="normal" color={theme.colorSecondary} margin="0 0 10px 0">
                     Votes
-                  </ChumHumText>
-                  <ChumHumText fontSize="20px" fontWeight="900">
+                  </VenusText>
+                  <VenusText fontSize="20px" fontWeight="900">
                     600,267.4176
-                  </ChumHumText>
+                  </VenusText>
                 </FlexLayout>
                 <FlexLayout justify="flex-end" margin="0 0 10px 0">
                   <User />
-                  <ChumHumText margin="0 20px">132</ChumHumText>
+                  <VenusText margin="0 20px">132</VenusText>
                 </FlexLayout>
               </FlexLayout>
-              <ChumHumProgress percent={100} width="100%"></ChumHumProgress>
+              <VenusProgress percent={100} width="100%"></VenusProgress>
             </FlexLayout>
             <Divider />
             <FlexLayout padding="20px 0 30px 0" direction="column" align="flex-start">
-              <ChumHumText fontSize="16px" fontWeight="normal" color={theme.colorSecondary} margin="0 0 10px 0">
+              <VenusText fontSize="16px" fontWeight="normal" color={theme.colorSecondary} margin="0 0 10px 0">
                 Delegating To
-              </ChumHumText>
-              <ChumHumText fontSize="20px" fontWeight="900">
+              </VenusText>
+              <VenusText fontSize="20px" fontWeight="900">
                 Undelegated
-              </ChumHumText>
+              </VenusText>
             </FlexLayout>
           </Container>
         </Col>
         <Col md={below960 ? 12 : 7}>
           <Container>
-            <ChumHumText fontSize="17px" fontWeight="900" margin="0 0 25px 0" align="left">
+            <VenusText fontSize="17px" fontWeight="900" margin="0 0 25px 0" align="left">
               Transactions
-            </ChumHumText>
+            </VenusText>
             <Divider />
             <TransactionList tokens={transactionData} />
             <ExternalAddress href='https://bscscan.com/address/0x1ca3ac3686071be692be7f1fbecd668641476d7e' target='blank'>VIEW MORE</ExternalAddress>
@@ -225,9 +225,9 @@ const Details = ({ address }) => {
       <Row>
         <Col md='12'>
           <Container>
-            <ChumHumText fontSize="17px" fontWeight="900" margin="0 0 25px 0" align="left">
+            <VenusText fontSize="17px" fontWeight="900" margin="0 0 25px 0" align="left">
               Voting History
-            </ChumHumText>
+            </VenusText>
             <Divider />
             <VotingList tokens={votingData} />
           </Container>

@@ -23,7 +23,7 @@ import Switch from '../../../components/switch'
 import DashboardList from './list'
 import InputBox from './inputbox'
 import MintCard from './mintCard'
-import { FlexLayout, ChumHumText, PageTitle, Container } from '../../../components/styles';
+import { FlexLayout, VenusText, PageTitle, Container } from '../../../components/styles';
 
 import xvsIcon from '../../../assets/img/dashboard/xvs-icon.png';
 import vaiIcon from '../../../assets/img/dashboard/vai-icon.svg';
@@ -577,13 +577,13 @@ const Dashboard = ({ tokenData, setTokenData }) => {
                   <FlexLayout justify="space-between">
                     <FlexLayout justify="flex-start">
                       <img src={item.icon} style={{ width: "25px" }} alt="currency" />
-                      <ChumHumText margin="0 10px 0 10px" fontSize="1.2rem">{item.text}</ChumHumText>
+                      <VenusText margin="0 10px 0 10px" fontSize="1.2rem">{item.text}</VenusText>
                       <img src={item.plusIcon} className="cursor-pointer" style={{ width: "17px" }} alt="plus" onClick={() => handleAddToken(item.type)} />
-                      <ChumHumText margin="0 0 0 10px" color="#9dd562">{item.extraText}</ChumHumText>
+                      <VenusText margin="0 0 0 10px" color="#9dd562">{item.extraText}</VenusText>
                     </FlexLayout>
                     <FlexLayout justify="flex-end">
                       <a className='link-address' href="https://bscscan.com/token/0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63?a=0x0144a7B97D04FB79152FB6b6Ee535d0Bf4304fd1" target="blank" style={{ display: "flex" }}>
-                        <ChumHumText margin="0 20px 0 0" fontSize="1.1rem" color="inherit">{item.address}</ChumHumText>
+                        <VenusText margin="0 20px 0 0" fontSize="1.1rem" color="inherit">{item.address}</VenusText>
                         <img src={arrowIcon} style={{ width: "1rem", transform: 'rotate(-45deg)' }} alt="arrow" />
                       </a>
                     </FlexLayout>
@@ -593,11 +593,11 @@ const Dashboard = ({ tokenData, setTokenData }) => {
             })
           }
           <Container padding="20px" backgroundImage="linear-gradient(to right, rgb(242, 194, 101), rgb(247, 180, 79))">
-            <ChumHumText align="left" fontSize="2rem" lineHeight="3rem">$0</ChumHumText>
-            <ChumHumText align="left">Available Credit</ChumHumText>
+            <VenusText align="left" fontSize="2rem" lineHeight="3rem">$0</VenusText>
+            <VenusText align="left">Available Credit</VenusText>
             <FlexLayout justify="space-between">
-              <ChumHumText align="left">Borrow Limit</ChumHumText>
-              <ChumHumText fontSize="1.2rem">0%</ChumHumText>
+              <VenusText align="left">Borrow Limit</VenusText>
+              <VenusText fontSize="1.2rem">0%</VenusText>
             </FlexLayout>
             <Progress value={0} />
           </Container>
@@ -606,17 +606,17 @@ const Dashboard = ({ tokenData, setTokenData }) => {
               <DropDownMenu list={currencyList} current={currency} setCurrent={handleCurrency}>
                 .
               </DropDownMenu>
-              <ChumHumText fontSize="1.1rem">Overview</ChumHumText>
-              <ChumHumText fontWeight="normal" padding="0 10px" fontSize="0.9rem">SXP</ChumHumText>
+              <VenusText fontSize="1.1rem">Overview</VenusText>
+              <VenusText fontWeight="normal" padding="0 10px" fontSize="0.9rem">SXP</VenusText>
               <img src={plusGreenIcon} className="cursor-pointer" style={{ height: "1.3rem" }} alt="plus" onClick={() => handleAddToken('sxp')} />
-              <ChumHumText fontWeight="normal" padding="0 10px" fontSize="0.9rem">vSXP</ChumHumText>
+              <VenusText fontWeight="normal" padding="0 10px" fontSize="0.9rem">vSXP</VenusText>
               <img src={plusGreenIcon} className='cursor-pointer' style={{ height: "1.3rem" }} alt="plus" onClick={() => handleAddToken('vsxp')} />
-              <ChumHumText fontWeight="normal" padding="0 0 0 10px" fontSize="0.9rem">To MetaMask</ChumHumText>
+              <VenusText fontWeight="normal" padding="0 0 0 10px" fontSize="0.9rem">To MetaMask</VenusText>
             </FlexLayout>
-            <ChumHumText padding="0 0 0 2.5rem" fontSize="0.9rem" fontWeight="normal" color="#a1a1a1" align="left">Historical rates</ChumHumText>
-            <ChumHumText color="#9dd562" fontSize="1.2rem" align="right">5.35%</ChumHumText>
-            <ChumHumText fontWeight="normal" color="#a1a1a1" align="right">Supply APY</ChumHumText>
-            <ChumHumText align="right" margin="8px 0 0 0">APY</ChumHumText>
+            <VenusText padding="0 0 0 2.5rem" fontSize="0.9rem" fontWeight="normal" color="#a1a1a1" align="left">Historical rates</VenusText>
+            <VenusText color="#9dd562" fontSize="1.2rem" align="right">5.35%</VenusText>
+            <VenusText fontWeight="normal" color="#a1a1a1" align="right">Supply APY</VenusText>
+            <VenusText align="right" margin="8px 0 0 0">APY</VenusText>
             <ResponsiveContainer width="100%" className="dashboard-chart">
               <AreaChart
                 data={apyGraphData}
@@ -634,44 +634,44 @@ const Dashboard = ({ tokenData, setTokenData }) => {
               </AreaChart>
             </ResponsiveContainer>
             <FlexLayout justify="space-between">
-              <ChumHumText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Price</ChumHumText>
-              <ChumHumText fontSize="1.1rem">{currencyTokenData.price}</ChumHumText>
+              <VenusText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Price</VenusText>
+              <VenusText fontSize="1.1rem">{currencyTokenData.price}</VenusText>
             </FlexLayout>
             <FlexLayout justify="space-between">
-              <ChumHumText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Market Liquidity</ChumHumText>
-              <ChumHumText fontSize="1.1rem">{currencyTokenData.liquidity}</ChumHumText>
+              <VenusText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Market Liquidity</VenusText>
+              <VenusText fontSize="1.1rem">{currencyTokenData.liquidity}</VenusText>
             </FlexLayout>
             <FlexLayout justify="space-between">
-              <ChumHumText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal"># of Suppliers</ChumHumText>
-              <ChumHumText fontSize="1.1rem">{currencyTokenData.suppliers}</ChumHumText>
+              <VenusText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal"># of Suppliers</VenusText>
+              <VenusText fontSize="1.1rem">{currencyTokenData.suppliers}</VenusText>
             </FlexLayout>
             <FlexLayout justify="space-between">
-              <ChumHumText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal"># of Borrowers</ChumHumText>
-              <ChumHumText fontSize="1.1rem">{currencyTokenData.borrowers}</ChumHumText>
+              <VenusText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal"># of Borrowers</VenusText>
+              <VenusText fontSize="1.1rem">{currencyTokenData.borrowers}</VenusText>
             </FlexLayout>
             <FlexLayout justify="space-between">
-              <ChumHumText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Reserves</ChumHumText>
-              <ChumHumText fontSize="1.1rem">{currencyTokenData.reserves}</ChumHumText>
+              <VenusText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Reserves</VenusText>
+              <VenusText fontSize="1.1rem">{currencyTokenData.reserves}</VenusText>
             </FlexLayout>
             <FlexLayout justify="space-between">
-              <ChumHumText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Reserve Factor</ChumHumText>
-              <ChumHumText fontSize="1.1rem">{currencyTokenData.reserve}</ChumHumText>
+              <VenusText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Reserve Factor</VenusText>
+              <VenusText fontSize="1.1rem">{currencyTokenData.reserve}</VenusText>
             </FlexLayout>
             <FlexLayout justify="space-between">
-              <ChumHumText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Collateral Factor</ChumHumText>
-              <ChumHumText fontSize="1.1rem">{currencyTokenData.collateral}</ChumHumText>
+              <VenusText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Collateral Factor</VenusText>
+              <VenusText fontSize="1.1rem">{currencyTokenData.collateral}</VenusText>
             </FlexLayout>
             <FlexLayout justify="space-between">
-              <ChumHumText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Total Supply</ChumHumText>
-              <ChumHumText fontSize="1.1rem">{currencyTokenData.supply}</ChumHumText>
+              <VenusText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Total Supply</VenusText>
+              <VenusText fontSize="1.1rem">{currencyTokenData.supply}</VenusText>
             </FlexLayout>
             <FlexLayout justify="space-between">
-              <ChumHumText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Total Borrow</ChumHumText>
-              <ChumHumText fontSize="1.1rem">{currencyTokenData.borrow}</ChumHumText>
+              <VenusText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Total Borrow</VenusText>
+              <VenusText fontSize="1.1rem">{currencyTokenData.borrow}</VenusText>
             </FlexLayout>
             <FlexLayout justify="space-between">
-              <ChumHumText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Exchange Rate</ChumHumText>
-              <ChumHumText fontSize="1.1rem">{currencyTokenData.rate}</ChumHumText>
+              <VenusText color="#a1a1a1" fontSize="0.9rem" fontWeight="normal">Exchange Rate</VenusText>
+              <VenusText fontSize="1.1rem">{currencyTokenData.rate}</VenusText>
             </FlexLayout>
           </Container>
         </Col>
@@ -679,8 +679,8 @@ const Dashboard = ({ tokenData, setTokenData }) => {
           <Container>
             <FlexLayout justify="space-around">
               <FlexLayout direction="column" justify="space-between">
-                <ChumHumText fontSize="1.3rem">Supply Balance</ChumHumText>
-                <ChumHumText fontSize="1.3rem" margin="30px 0 0 0">$0</ChumHumText>
+                <VenusText fontSize="1.3rem">Supply Balance</VenusText>
+                <VenusText fontSize="1.3rem" margin="30px 0 0 0">$0</VenusText>
               </FlexLayout>
               <FlexLayout width="180px" direction="column">
                 <CircularProgressbarWithChildren
@@ -691,28 +691,28 @@ const Dashboard = ({ tokenData, setTokenData }) => {
                     trailColor: "#f8b94b"
                   })}
                 >
-                  <ChumHumText color="#9dd562" fontSize="1.4rem">0%</ChumHumText>
-                  <ChumHumText fontSize="0.9rem" fontWeight="normal" color="#a1a1a1" margin="10px 0 0 0">Net APY</ChumHumText>
+                  <VenusText color="#9dd562" fontSize="1.4rem">0%</VenusText>
+                  <VenusText fontSize="0.9rem" fontWeight="normal" color="#a1a1a1" margin="10px 0 0 0">Net APY</VenusText>
                 </CircularProgressbarWithChildren>
                 <FlexLayout direction="column" padding="15px 0 0 0">
                   <Switch switchValue={switchCheck} handleSwitch={handleSwitchCheck} />
                   {
                     switchCheck === true &&
-                    <ChumHumText fontSize="0.9rem">
+                    <VenusText fontSize="0.9rem">
                       🔥 APY with XVS
-                    </ChumHumText>
+                    </VenusText>
                   }
                   {
                     switchCheck === false &&
-                    <ChumHumText fontSize="0.9rem">
+                    <VenusText fontSize="0.9rem">
                       <span class="gray">🔥</span>APY without XVS
-                    </ChumHumText>
+                    </VenusText>
                   }
                 </FlexLayout>
               </FlexLayout>
               <FlexLayout direction="column" justify="space-between">
-                <ChumHumText fontSize="1.3rem">Borrow Balance</ChumHumText>
-                <ChumHumText fontSize="1.3rem" margin="30px 0 0 0">$0</ChumHumText>
+                <VenusText fontSize="1.3rem">Borrow Balance</VenusText>
+                <VenusText fontSize="1.3rem" margin="30px 0 0 0">$0</VenusText>
               </FlexLayout>
             </FlexLayout>
           </Container>
@@ -733,22 +733,22 @@ const Dashboard = ({ tokenData, setTokenData }) => {
                 <FlexLayout padding="20px 0 30px 0">
                   <FlexLayout width="50%">
                     <InputBox value={mintValue} handleChange={(e) => setMintValue(e.target.value)} />
-                    <ChumHumText color="rgb(189, 189, 189)" cursor="pointer" onClick={() => handleMax()}>SAFE<br />MAX</ChumHumText>
+                    <VenusText color="rgb(189, 189, 189)" cursor="pointer" onClick={() => handleMax()}>SAFE<br />MAX</VenusText>
                   </FlexLayout>
                   {
                     mintSuccess &&
                     <FlexLayout width="50%">
                       <InputBox value={repayValue} handleChange={(e) => setRepayValue(e.target.value)} />
-                      <ChumHumText color="rgb(189, 189, 189)" cursor="pointer" onClick={() => handleMax()}>MAX</ChumHumText>
+                      <VenusText color="rgb(189, 189, 189)" cursor="pointer" onClick={() => handleMax()}>MAX</VenusText>
                     </FlexLayout>
                   }
                   {
                     !mintSuccess &&
                     <FlexLayout width='50%' direction="column">
                       <img src={VAI} alt="vai" style={{ width: '30px' }} />
-                      <ChumHumText color='#a1a1a1' fontWeight='normal' padding="10px 0 0 0">
+                      <VenusText color='#a1a1a1' fontWeight='normal' padding="10px 0 0 0">
                         To repay VAI to the Venus Protocol, you need to approve it first.
-                      </ChumHumText>
+                      </VenusText>
                     </FlexLayout>
                   }
                 </FlexLayout>

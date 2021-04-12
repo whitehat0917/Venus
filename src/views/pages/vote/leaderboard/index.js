@@ -5,7 +5,7 @@ import { List, User } from 'react-feather'
 
 import {
   FlexLayout,
-  ChumHumText,
+  VenusText,
   PageTitle,
   Container,
   Divider,
@@ -92,7 +92,7 @@ const Leaderboard = ({ address }) => {
       <Row>
         <Col md={12}>
           <Container>
-            <ChumHumText fontWeight="600" fontSize="20px" margin="0 0 40px 0" align="left">Addresses by Voting Weight</ChumHumText>
+            <VenusText fontWeight="600" fontSize="20px" margin="0 0 40px 0" align="left">Addresses by Voting Weight</VenusText>
             <VotingWeightList list={list} />
           </Container>
         </Col>

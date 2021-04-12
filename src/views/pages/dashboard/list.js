@@ -9,8 +9,8 @@ import { withRouter } from 'react-router-dom'
 
 import theme from '../../../theme'
 import { Row } from '../../../components/styles'
-import { ChumHumText, FlexLayout } from '../../../components/styles'
-import ChumHumIcon from '../../../components/ChumHumIcon'
+import { VenusText, FlexLayout } from '../../../components/styles'
+import VenusIcon from '../../../components/VenusIcon'
 
 const OVERVIEW_TOKEN_BLACKLIST = [];
 
@@ -59,12 +59,12 @@ function DashboardList({ tokens, type, handleListSwitchCheck }) {
 			<DashGrid>
 				<DataText area="asset" fontWeight="500" onClick={() => handleOpenModal(item)}>
 					<Row>
-						<ChumHumIcon icon={item.icon} width="24px" height="24px" marginRight="8px" />
+						<VenusIcon icon={item.icon} width="24px" height="24px" marginRight="8px" />
 						<FlexLayout direction="column">
-							<ChumHumText>{item.name}</ChumHumText>
+							<VenusText>{item.name}</VenusText>
 							{
 								isMobile &&
-								<ChumHumText fontSize="0.9rem" color={item.direction === 'up' ? 'rgb(157, 213, 98)' : 'rgb(249, 5, 62)'}>{item.apy}</ChumHumText>
+								<VenusText fontSize="0.9rem" color={item.direction === 'up' ? 'rgb(157, 213, 98)' : 'rgb(249, 5, 62)'}>{item.apy}</VenusText>
 							}
 						</FlexLayout>
 					</Row>
@@ -72,12 +72,12 @@ function DashboardList({ tokens, type, handleListSwitchCheck }) {
 				{
 					!isMobile &&
 					<DataText area="apy" onClick={() => handleOpenModal(item)}>
-						<ChumHumIcon icon={item.arrow} width="18px" height="18px" marginRight="20px" />
-						<ChumHumText color={item.direction === 'up' ? 'rgb(157, 213, 98)' : 'rgb(249, 5, 62)'}>{item.apy}</ChumHumText>
+						<VenusIcon icon={item.arrow} width="18px" height="18px" marginRight="20px" />
+						<VenusText color={item.direction === 'up' ? 'rgb(157, 213, 98)' : 'rgb(249, 5, 62)'}>{item.apy}</VenusText>
 					</DataText>
 				}
 				<DataText area="wallet" onClick={() => handleOpenModal(item)}>
-					<ChumHumText>{item.wallet}</ChumHumText>
+					<VenusText>{item.wallet}</VenusText>
 				</DataText>
 				<DataText area="collateral">
 					{
@@ -86,7 +86,7 @@ function DashboardList({ tokens, type, handleListSwitchCheck }) {
 					}
 					{
 						type === 'borrow' &&
-						<ChumHumText onClick={() => handleOpenModal(item)}>{item.liquidity}</ChumHumText>
+						<VenusText onClick={() => handleOpenModal(item)}>{item.liquidity}</VenusText>
 					}
 				</DataText>
 			</DashGrid>
@@ -99,7 +99,7 @@ function DashboardList({ tokens, type, handleListSwitchCheck }) {
 				openModal &&
 				<DashboardModal item={modalItem} type={type} modal={openModal} toggle={handleModalToggle} />
 			}
-			<ChumHumText fontSize="1.5rem" padding="15px 1.25rem" align="left" fontWeight="normal">All Markets</ChumHumText>
+			<VenusText fontSize="1.5rem" padding="15px 1.25rem" align="left" fontWeight="normal">All Markets</VenusText>
 			<DashGrid style={{ height: 'fit-content', padding: '0 1.125rem 1rem 1.125rem' }}>
 				<Flex alignItems="center" justifyContent="flexStart">
 					<ClickableText

@@ -4,12 +4,12 @@ import { useMedia } from 'react-use'
 
 import { 
   FlexLayout, 
-  ChumHumText, 
+  VenusText, 
   PageTitle, 
   Container,
 } from '../../../components/styles';
 import CopyHelper from '../../../components/Copy';
-import ChumHumIcon from '../../../components/ChumHumIcon';
+import VenusIcon from '../../../components/VenusIcon';
 import ChunHumProgress from '../../../components/Progress';
 import ChumList from '../../../components/ChumList';
 import { InfoDisplay } from './style';
@@ -177,8 +177,8 @@ const Chum = () => {
       <Row>
         <Col md={below1080 ? 12 : 6}>
           <FlexLayout justify={below1080 ? "center" : "flex-start"} padding="20px 0">
-            <ChumHumIcon icon={xvsIcon} width="24px" height="24px" marginRight="8px" />
-            <ChumHumText>{address}</ChumHumText>
+            <VenusIcon icon={xvsIcon} width="24px" height="24px" marginRight="8px" />
+            <VenusText>{address}</VenusText>
             <CopyHelper toCopy={address} />
           </FlexLayout>
         </Col>
@@ -201,7 +201,7 @@ const Chum = () => {
       <Row>
         <Col md="12">
           <Container>
-            <ChumHumText fontSize="20px" align="left" margin="0 0 2rem 0">Market Distribution</ChumHumText>
+            <VenusText fontSize="20px" align="left" margin="0 0 2rem 0">Market Distribution</VenusText>
             <ChumList tokens={DataList} />
           </Container>
         </Col>

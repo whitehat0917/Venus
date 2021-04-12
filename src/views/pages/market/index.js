@@ -4,12 +4,12 @@ import { useMedia } from 'react-use'
 
 import { 
   FlexLayout, 
-  ChumHumText, 
+  VenusText, 
   PageTitle, 
   Container,
   Divider
 } from '../../../components/styles';
-import ChumHumIcon from '../../../components/ChumHumIcon';
+import VenusIcon from '../../../components/VenusIcon';
 import { TotalInfo, InfoDisplay } from './style';
 import MarketList from '../../../components/MarketList'
 import theme from '../../../theme';
@@ -463,9 +463,9 @@ const Market = () => {
                   <p>$2,861,680,470.35</p>
                 </InfoDisplay>
               </FlexLayout>
-              <ChumHumText fontWeight="bold" fontSize="18px" color={theme.textGreen} align="left" margin="20px 0">
+              <VenusText fontWeight="bold" fontSize="18px" color={theme.textGreen} align="left" margin="20px 0">
                 VAI Staking APY: 17.11%
-              </ChumHumText>
+              </VenusText>
               <Divider />
             </TotalInfo>
             <MarketList tokens={DataList} />

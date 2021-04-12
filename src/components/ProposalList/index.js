@@ -8,7 +8,7 @@ import { Minus } from 'react-feather'
 
 import theme from '../../theme'
 import { FlexLayout, Row, CustomLink } from '../styles'
-import { ChumHumText, Divider, CircleDiv } from '../../components/styles'
+import { VenusText, Divider, CircleDiv } from '../../components/styles'
 
 const PageButtons = styled.div`
   width: 100%;
@@ -86,22 +86,22 @@ const ProposalList = ({ tokens, itemMax = 5 }) => {
     return (
       <CustomLink to={'vote/proposal/' + item.number}>
         <FlexLayout padding="15px 0" direction="column" align="flex-start">
-          <ChumHumText fontSize="20px" fontWeight="900" margin="0 0 20px 0">{item.title}</ChumHumText>
+          <VenusText fontSize="20px" fontWeight="900" margin="0 0 20px 0">{item.title}</VenusText>
           <FlexLayout justify="space-between" width="100%">
             <FlexLayout direction={below1440 ? "column" : "row"}>
               <FlexLayout padding="0 10px">
-                <ChumHumText fontSize="16px" fontWeight="900" color={theme.colorSecondary} padding="0 5px">{item.number}</ChumHumText>
-                <ChumHumText fontSize="16px" fontWeight="900" color={theme.colorSecondary} padding="0 5px">{item.status1}</ChumHumText>
-                <ChumHumText fontSize="16px" fontWeight="900" color={theme.colorSecondary} padding="0 5px">{item.date1}</ChumHumText>
+                <VenusText fontSize="16px" fontWeight="900" color={theme.colorSecondary} padding="0 5px">{item.number}</VenusText>
+                <VenusText fontSize="16px" fontWeight="900" color={theme.colorSecondary} padding="0 5px">{item.status1}</VenusText>
+                <VenusText fontSize="16px" fontWeight="900" color={theme.colorSecondary} padding="0 5px">{item.date1}</VenusText>
               </FlexLayout>
               <FlexLayout padding="0 10px">
-                <ChumHumText 
+                <VenusText 
                   fontSize="16px" fontWeight="900" padding="0 5px"
                   color={getColor(item.status2)}
                 >
                   {item.status2}
-                </ChumHumText>
-                <ChumHumText fontSize="16px" fontWeight="900" color={theme.colorSecondary} padding="0 5px">{item.date2}</ChumHumText>
+                </VenusText>
+                <VenusText fontSize="16px" fontWeight="900" color={theme.colorSecondary} padding="0 5px">{item.date2}</VenusText>
               </FlexLayout>
             </FlexLayout>
             <FlexLayout width="130px" padding="0 10px 0 20px">
@@ -109,8 +109,8 @@ const ProposalList = ({ tokens, itemMax = 5 }) => {
                 <Minus></Minus>
               </CircleDiv>
               <FlexLayout direction="column" width="50px" align="flex-start" margin="0 0 0 20px">
-                <ChumHumText color={theme.colorOrange} fontSize="16px" fontWeight="900">NO</ChumHumText>
-                <ChumHumText color={theme.colorOrange} fontSize="16px" fontWeight="900">VOTE</ChumHumText>
+                <VenusText color={theme.colorOrange} fontSize="16px" fontWeight="900">NO</VenusText>
+                <VenusText color={theme.colorOrange} fontSize="16px" fontWeight="900">VOTE</VenusText>
               </FlexLayout>
             </FlexLayout>
           </FlexLayout>
@@ -136,7 +136,7 @@ const ProposalList = ({ tokens, itemMax = 5 }) => {
         <div onClick={() => setPage(page === 1 ? page : page - 1)}>
           <Arrow faded={page === 1 ? true : false}>←</Arrow>
         </div>
-        <ChumHumText>{'Page ' + page + ' of ' + maxPage}</ChumHumText>
+        <VenusText>{'Page ' + page + ' of ' + maxPage}</VenusText>
         <div onClick={() => setPage(page === maxPage ? page : page + 1)}>
           <Arrow faded={page === maxPage ? true : false}>→</Arrow>
         </div>

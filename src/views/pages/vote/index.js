@@ -4,7 +4,7 @@ import { useMedia } from 'react-use'
 
 import {
   FlexLayout,
-  ChumHumText,
+  VenusText,
   PageTitle,
   Container,
   BscScanLink,
@@ -13,8 +13,8 @@ import {
 } from '../../../components/styles';
 import Modal from './modal'
 import ProposalList from '../../../components/ProposalList';
-import ChumHumIcon from '../../../components/ChumHumIcon';
-import ChumHumButton from '../../../components/ChumHumButton';
+import VenusIcon from '../../../components/VenusIcon';
+import VenusButton from '../../../components/VenusButton';
 import { InfoDisplay } from './style';
 import theme from '../../../theme';
 
@@ -154,8 +154,8 @@ const Vote = () => {
           <Container height="100px" padding="0 15px" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <FlexLayout justify="space-between" width="100%">
               <FlexLayout justify="flex-start" align="center">
-                <ChumHumIcon icon={xvsIcon} width="24px" height="24px" marginRight="8px" />
-                <ChumHumText fontSize="17px">0.00000000</ChumHumText>
+                <VenusIcon icon={xvsIcon} width="24px" height="24px" marginRight="8px" />
+                <VenusText fontSize="17px">0.00000000</VenusText>
               </FlexLayout>
               <FlexLayout justify="flex-end">
                 <BscScanLink to={{ pathname: "https://bscscan.com/address/0x0BF82CE1BDE549DaFadae4472b3398dd70E94F13" }} target="_blank">
@@ -163,7 +163,7 @@ const Vote = () => {
                 </BscScanLink>
                 <BscScanLink to={{ pathname: "https://bscscan.com/address/0x0BF82CE1BDE549DaFadae4472b3398dd70E94F13" }} target="_blank">
                   <CircleDiv transform="rotate(-45deg)" margin="0 0 0 15px">
-                    <ChumHumIcon icon={gotoIcon} width="14px" height="14px" />
+                    <VenusIcon icon={gotoIcon} width="14px" height="14px" />
                   </CircleDiv>
                 </BscScanLink>
               </FlexLayout>
@@ -185,10 +185,10 @@ const Vote = () => {
         <Col md={below1080 ? 12 : 5}>
           <Container>
             <FlexLayout padding="0 0 20px 33px" justify="flex-start">
-              <ChumHumText fontSize="17px" align="left" >Voting Wallet</ChumHumText>
+              <VenusText fontSize="17px" align="left" >Voting Wallet</VenusText>
             </FlexLayout>
             <FlexLayout justify="flex-start" align="flex-end" margin="20px 0">
-              <ChumHumIcon icon={xvsIcon} width="25px" height="25px" marginRight="8px" />
+              <VenusIcon icon={xvsIcon} width="25px" height="25px" marginRight="8px" />
               <InfoDisplay>
                 <h4>Venus Balance</h4>
                 <p>0.0000<span>0000</span></p>
@@ -198,30 +198,30 @@ const Vote = () => {
             <FlexLayout justify="space-between" margin="15px 0">
               <FlexLayout direction="column">
                 <FlexLayout justify="flex-start" align="flex-end" margin="15px 0">
-                  <ChumHumIcon icon={xvsIcon} width="25px" height="25px" marginRight="8px" />
+                  <VenusIcon icon={xvsIcon} width="25px" height="25px" marginRight="8px" />
                   <InfoDisplay>
                     <h4>Venus Earned</h4>
                     <p>0.0000<span>0000</span></p>
                   </InfoDisplay>
                 </FlexLayout>
                 <FlexLayout justify="flex-start" align="flex-end" margin="15px 0">
-                  <ChumHumIcon icon={xvsIcon} width="25px" height="25px" marginRight="8px" />
+                  <VenusIcon icon={xvsIcon} width="25px" height="25px" marginRight="8px" />
                   <InfoDisplay>
                     <h4>VAI Mint Earned</h4>
                     <p>0.0000<span>0000</span></p>
                   </InfoDisplay>
                 </FlexLayout>
               </FlexLayout>
-              <ChumHumText color={theme.colorOrange} fontSize="16px" style={{ cursor: "pointer" }}>Collect</ChumHumText>
+              <VenusText color={theme.colorOrange} fontSize="16px" style={{ cursor: "pointer" }}>Collect</VenusText>
             </FlexLayout>
             <Divider />
             <FlexLayout direction="column" padding="30px 30px 10px 33px" align="flex-start">
-              <ChumHumText fontSize="18px" fontWeight="900" margin="0 0 30px 0" align="left">Setup Voting</ChumHumText>
-              <ChumHumText fontSize="16px" color={theme.colorSecondary} align="left" fontWeight="400">
+              <VenusText fontSize="18px" fontWeight="900" margin="0 0 30px 0" align="left">Setup Voting</VenusText>
+              <VenusText fontSize="16px" color={theme.colorSecondary} align="left" fontWeight="400">
                 You can either vote on each proposal yourself or delegate your votes to a third party. Venus Governance puts you in charge of the future of Venus.
-              </ChumHumText>
+              </VenusText>
               <FlexLayout margin="30px 0 0 0" width="100%">
-                <ChumHumButton text="Get Started" width="50%" height="46px" handleClick={handleClick} />
+                <VenusButton text="Get Started" width="50%" height="46px" handleClick={handleClick} />
               </FlexLayout>
             </FlexLayout>
           </Container>
@@ -229,8 +229,8 @@ const Vote = () => {
         <Col md={below1080 ? 12 : 7}>
           <Container>
             <FlexLayout justify="space-between" margin="0 0 30px 0">
-              <ChumHumText fontSize="17px" fontWeight="900">Governance Proposals</ChumHumText>
-              <ChumHumButton text="Create Proposal" width="150px" height="40px"></ChumHumButton>
+              <VenusText fontSize="17px" fontWeight="900">Governance Proposals</VenusText>
+              <VenusButton text="Create Proposal" width="150px" height="40px"></VenusButton>
             </FlexLayout>
             <ProposalList tokens={DataList} />
           </Container>

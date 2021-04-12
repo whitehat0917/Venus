@@ -6,7 +6,7 @@ import { useMedia } from 'react-use'
 
 import {
   FlexLayout,
-  ChumHumText,
+  VenusText,
   PageTitle,
   Container,
   Divider,
@@ -16,9 +16,9 @@ import {
 } from '../../../../components/styles';
 import { Address } from './style'
 import BackButton from '../../../../components/BackButton';
-import ChumHumProgress from '../../../../components/Progress';
+import VenusProgress from '../../../../components/Progress';
 import theme from '../../../../theme';
-import ChumHumIcon from '../../../../components/ChumHumIcon';
+import VenusIcon from '../../../../components/VenusIcon';
 import gotoIcon from '../../../../assets/img/icons/goto.svg'
 
 
@@ -82,8 +82,8 @@ const HistoryItem = ({ item }) => {
         <Check size={10}></Check>
       </CircleDiv>
       <FlexLayout padding="0 10px" direction="column" align="flex-start" style={{ flex: "1" }}>
-        <ChumHumText>{item.label}</ChumHumText>
-        <ChumHumText color={theme.colorSecondary}>{item.date}</ChumHumText>
+        <VenusText>{item.label}</VenusText>
+        <VenusText color={theme.colorSecondary}>{item.date}</VenusText>
       </FlexLayout>
     </FlexLayout>
   )
@@ -107,7 +107,7 @@ const VoteItem = ({ item }) => {
   return (
     <FlexLayout justify="space-between" width="100%" minHeight="46px" borderBottom={`1px solid ${theme.bgActive}`} borderTop={`1px solid ${theme.bgActive}`}>
       <Address to={'/pages/vote/address/' + item.address}>{item.address}</Address>
-      <ChumHumText>{item.votes}</ChumHumText>
+      <VenusText>{item.votes}</VenusText>
     </FlexLayout>
   )
 }
@@ -133,7 +133,7 @@ const VoteList = ({ list }) => {
       </FlexLayout>
       {
         showAll === false &&
-        <ChumHumText padding="10px 0 0 0" cursor="pointer" onClick={() => handleShowAll()}>View all</ChumHumText>
+        <VenusText padding="10px 0 0 0" cursor="pointer" onClick={() => handleShowAll()}>View all</VenusText>
       }
     </FlexLayout>
   )
@@ -163,17 +163,17 @@ const Overview = ({ proposalId }) => {
           <Row style={{ marginBottom: "25px" }}>
             <Col md={below960 ? 12 : 6}>
               <FlexLayout direction="column" align="flex-start" padding="0 0 20px 0">
-                <ChumHumText fontSize="20px" fontWeight="900" margin="0 0 30px 0" align="left">Governance</ChumHumText>
-                <ChumHumText fontSize="22px" fontWeight="600" margin="0 0 18px 0" align="left">{proposalData.title}</ChumHumText>
+                <VenusText fontSize="20px" fontWeight="900" margin="0 0 30px 0" align="left">Governance</VenusText>
+                <VenusText fontSize="22px" fontWeight="600" margin="0 0 18px 0" align="left">{proposalData.title}</VenusText>
                 <FlexLayout justify="space-between">
-                  <ChumHumText color={theme.colorSecondary}>{proposalData.date1}</ChumHumText>
-                  <ChumHumText
+                  <VenusText color={theme.colorSecondary}>{proposalData.date1}</VenusText>
+                  <VenusText
                     margin="0 10px"
                     color={getColor(proposalData.status2)}
                   >
                     {proposalData.status2}
-                  </ChumHumText>
-                  <ChumHumText color={theme.colorSecondary}>{proposalData.date2}</ChumHumText>
+                  </VenusText>
+                  <VenusText color={theme.colorSecondary}>{proposalData.date2}</VenusText>
                 </FlexLayout>
               </FlexLayout>
             </Col>
@@ -185,7 +185,7 @@ const Overview = ({ proposalId }) => {
                   </BscScanLink>
                   <BscScanLink to={{ pathname: "https://bscscan.com/address/0x0BF82CE1BDE549DaFadae4472b3398dd70E94F13" }} target="_blank">
                     <CircleDiv transform="rotate(-45deg)" margin="0 0 0 15px">
-                      <ChumHumIcon icon={gotoIcon} width="14px" height="14px" />
+                      <VenusIcon icon={gotoIcon} width="14px" height="14px" />
                     </CircleDiv>
                   </BscScanLink>
                 </FlexLayout>
@@ -196,15 +196,15 @@ const Overview = ({ proposalId }) => {
             <Col md={below960 ? 12 : 6}>
               <Container>
                 <FlexLayout justify="space-between" margin="0 0 25px 0">
-                  <ChumHumText fontSize="17px" fontWeight="900">For</ChumHumText>
-                  <ChumHumText fontSize="17px" fontWeight="900">600,844.39172501</ChumHumText>
+                  <VenusText fontSize="17px" fontWeight="900">For</VenusText>
+                  <VenusText fontSize="17px" fontWeight="900">600,844.39172501</VenusText>
                 </FlexLayout>
                 <FlexLayout margin="0 0 25px 0">
-                  <ChumHumProgress percent={100} width="100%" progressColor={theme.colorDarkGreen}></ChumHumProgress>
+                  <VenusProgress percent={100} width="100%" progressColor={theme.colorDarkGreen}></VenusProgress>
                 </FlexLayout>
                 <FlexLayout justify="space-between" margin="0 0 10px 0">
-                  <ChumHumText color={theme.colorSecondary}>130 addresses</ChumHumText>
-                  <ChumHumText color={theme.colorSecondary}>Votes</ChumHumText>
+                  <VenusText color={theme.colorSecondary}>130 addresses</VenusText>
+                  <VenusText color={theme.colorSecondary}>Votes</VenusText>
                 </FlexLayout>
                 <VoteList list={votesData}></VoteList>
               </Container>
@@ -212,12 +212,12 @@ const Overview = ({ proposalId }) => {
             <Col md={below960 ? 12 : 6}>
               <Container>
                 <FlexLayout justify="space-between" margin="0 0 78px 0">
-                  <ChumHumText fontSize="17px" fontWeight="900">Against</ChumHumText>
-                  <ChumHumText fontSize="17px" fontWeight="900">48.56349297</ChumHumText>
+                  <VenusText fontSize="17px" fontWeight="900">Against</VenusText>
+                  <VenusText fontSize="17px" fontWeight="900">48.56349297</VenusText>
                 </FlexLayout>
                 <FlexLayout justify="space-between" margin="0 0 10px 0">
-                  <ChumHumText color={theme.colorSecondary}>8 addresses</ChumHumText>
-                  <ChumHumText color={theme.colorSecondary}>Votes</ChumHumText>
+                  <VenusText color={theme.colorSecondary}>8 addresses</VenusText>
+                  <VenusText color={theme.colorSecondary}>Votes</VenusText>
                 </FlexLayout>
                 <VoteList list={votesData}></VoteList>
               </Container>
@@ -227,13 +227,13 @@ const Overview = ({ proposalId }) => {
             <Col md={12}>
               <Container>
                 <FlexLayout padding="10px 0" direction="column" align="flex-start">
-                  <ChumHumText fontSize="20px" fontWeight="900">Operation</ChumHumText>
-                  <ChumHumText color={theme.colorSecondary}>_setInterestRateModel(address)</ChumHumText>
-                  <ChumHumText color={theme.colorSecondary}>_setInterestRateModel(address)</ChumHumText>
-                  <ChumHumText color={theme.colorSecondary}>_setInterestRateModel(address)</ChumHumText>
+                  <VenusText fontSize="20px" fontWeight="900">Operation</VenusText>
+                  <VenusText color={theme.colorSecondary}>_setInterestRateModel(address)</VenusText>
+                  <VenusText color={theme.colorSecondary}>_setInterestRateModel(address)</VenusText>
+                  <VenusText color={theme.colorSecondary}>_setInterestRateModel(address)</VenusText>
                 </FlexLayout>
                 <FlexLayout padding="10px 0" direction="column" align="flex-start">
-                  <ChumHumText fontSize="20px" fontWeight="900">Description</ChumHumText>
+                  <VenusText fontSize="20px" fontWeight="900">Description</VenusText>
                   <div>
                     <h2>VIP-11 Update Stablecoins Interest Rate</h2>
                     <h3>Model</h3>
@@ -255,7 +255,7 @@ const Overview = ({ proposalId }) => {
         </Col>
         <Col md={below1440 ? 12 : 3}>
           <Container>
-            <ChumHumText align="left" fontSize="17px" fontWeight="900">Proposal history</ChumHumText>
+            <VenusText align="left" fontSize="17px" fontWeight="900">Proposal history</VenusText>
             <HistoryList list={historyData}></HistoryList>
           </Container>
         </Col>

@@ -7,8 +7,8 @@ import { withRouter } from 'react-router-dom'
 
 import theme from '../../theme'
 import { FlexLayout, Row, CustomLink } from '../styles'
-import { ChumHumText } from '../../components/styles'
-import ChumHumIcon from '../../components/ChumHumIcon'
+import { VenusText } from '../../components/styles'
+import VenusIcon from '../../components/VenusIcon'
 
 const OVERVIEW_TOKEN_BLACKLIST = [];
 
@@ -134,39 +134,39 @@ const MarketList = ({ tokens }) => {
         <DashGrid>
           <DataText area="market" fontWeight="500">
             <Row>
-              <ChumHumIcon icon={item.icon} width="30px" height="30px" marginRight="8px" />
-              <ChumHumText>{item.name}</ChumHumText>
+              <VenusIcon icon={item.icon} width="30px" height="30px" marginRight="8px" />
+              <VenusText>{item.name}</VenusText>
             </Row>
           </DataText>
           <DataText area="totalsupply">
             <FlexLayout direction="column" align="flex-end">
-              <ChumHumText>{item.totalsupply.dollar}</ChumHumText>
-              <ChumHumText color={theme.colorSecondary}>{item.totalsupply.coin}</ChumHumText>
+              <VenusText>{item.totalsupply.dollar}</VenusText>
+              <VenusText color={theme.colorSecondary}>{item.totalsupply.coin}</VenusText>
             </FlexLayout>
           </DataText>
           <DataText area="supplyapy">
             <FlexLayout direction="column" align="flex-end">
-              <ChumHumText>{item.supplyapy.dollar}</ChumHumText>
-              <ChumHumText color={theme.colorSecondary}>{item.supplyapy.coin}</ChumHumText>
+              <VenusText>{item.supplyapy.dollar}</VenusText>
+              <VenusText color={theme.colorSecondary}>{item.supplyapy.coin}</VenusText>
             </FlexLayout>
           </DataText>
           <DataText area="totalborrow">
             <FlexLayout direction="column" align="flex-end">
-              <ChumHumText>{item.totalborrow.dollar}</ChumHumText>
-              <ChumHumText color={theme.colorSecondary}>{item.totalborrow.coin}</ChumHumText>
+              <VenusText>{item.totalborrow.dollar}</VenusText>
+              <VenusText color={theme.colorSecondary}>{item.totalborrow.coin}</VenusText>
             </FlexLayout>
           </DataText>
           <DataText area="borrowapy">
             <FlexLayout direction="column" align="flex-end">
-              <ChumHumText>{item.borrowapy.dollar}</ChumHumText>
-              <ChumHumText color={theme.colorSecondary}>{item.borrowapy.coin}</ChumHumText>
+              <VenusText>{item.borrowapy.dollar}</VenusText>
+              <VenusText color={theme.colorSecondary}>{item.borrowapy.coin}</VenusText>
             </FlexLayout>
           </DataText>
           <DataText area="liquidity">
-            <ChumHumText>{item.liquidity}</ChumHumText>
+            <VenusText>{item.liquidity}</VenusText>
           </DataText>
           <DataText area="Price">
-            <ChumHumText>{item.price}</ChumHumText>
+            <VenusText>{item.price}</VenusText>
           </DataText>
         </DashGrid>
       </CustomLink>
@@ -178,28 +178,28 @@ const MarketList = ({ tokens }) => {
       <CustomLink to={'market/' + item.name}>
         <FlexLayout justify="space-between" align="flex-start" padding="10px 0">
           <FlexLayout>
-            <ChumHumIcon icon={item.icon} width="30px" height="30px" marginRight="8px" />
-            <ChumHumText>{item.name}</ChumHumText>
+            <VenusIcon icon={item.icon} width="30px" height="30px" marginRight="8px" />
+            <VenusText>{item.name}</VenusText>
           </FlexLayout>
           <FlexLayout direction="column" align="flex-end">
             <FlexLayout direction="column" align="flex-end">
-              <ChumHumText>{item.totalsupply.dollar}</ChumHumText>
-              <ChumHumText color={theme.colorSecondary}>{item.totalsupply.coin}</ChumHumText>
+              <VenusText>{item.totalsupply.dollar}</VenusText>
+              <VenusText color={theme.colorSecondary}>{item.totalsupply.coin}</VenusText>
             </FlexLayout>
             <FlexLayout direction="column" align="flex-end">
-              <ChumHumText>{item.supplyapy.dollar}</ChumHumText>
-              <ChumHumText color={theme.colorSecondary}>{item.supplyapy.coin}</ChumHumText>
+              <VenusText>{item.supplyapy.dollar}</VenusText>
+              <VenusText color={theme.colorSecondary}>{item.supplyapy.coin}</VenusText>
             </FlexLayout>
             <FlexLayout direction="column" align="flex-end">
-              <ChumHumText>{item.totalborrow.dollar}</ChumHumText>
-              <ChumHumText color={theme.colorSecondary}>{item.totalborrow.coin}</ChumHumText>
+              <VenusText>{item.totalborrow.dollar}</VenusText>
+              <VenusText color={theme.colorSecondary}>{item.totalborrow.coin}</VenusText>
             </FlexLayout>
             <FlexLayout direction="column" align="flex-end">
-              <ChumHumText>{item.borrowapy.dollar}</ChumHumText>
-              <ChumHumText color={theme.colorSecondary}>{item.borrowapy.coin}</ChumHumText>
+              <VenusText>{item.borrowapy.dollar}</VenusText>
+              <VenusText color={theme.colorSecondary}>{item.borrowapy.coin}</VenusText>
             </FlexLayout>
-            <ChumHumText>{item.liquidity}</ChumHumText>
-            <ChumHumText>{item.price}</ChumHumText>
+            <VenusText>{item.liquidity}</VenusText>
+            <VenusText>{item.price}</VenusText>
           </FlexLayout>
         </FlexLayout>
       </CustomLink>

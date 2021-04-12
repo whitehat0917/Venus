@@ -27,7 +27,7 @@ export const FlexLayout = styled.div`
     flex-wrap: ${props => props.wrap || 'wrap'};
     overflow: ${props => props.overflow || 'unset'};
 `;
-export const ChumHumText = styled.p`
+export const VenusText = styled.p`
     width: ${props => props.width || "auto"};
     margin: ${props => props.margin || "0"};
     padding: ${props => props.padding || "0"};

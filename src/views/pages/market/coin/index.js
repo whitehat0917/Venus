@@ -16,7 +16,7 @@ import {
 
 import { 
   FlexLayout, 
-  ChumHumText, 
+  VenusText, 
   PageTitle, 
   Container,
   Divider
@@ -42,7 +42,7 @@ import USDT from '../../../../assets/img/icons/usdt-icon.png'
 import XRP from '../../../../assets/img/icons/xrp-icon.png'
 import XVS from '../../../../assets/img/icons/xvs-icon.png'
 import VAI from '../../../../assets/img/dashboard/vai-icon.svg'
-import ChumHumIcon from '../../../../components/ChumHumIcon';
+import VenusIcon from '../../../../components/VenusIcon';
 import TabPane from 'reactstrap/lib/TabPane';
 
 const supplyAPYData = [
@@ -165,8 +165,8 @@ const Coin = ({coinType}) => {
         <Col md={below960 ? 12 : 4}>
           <Container style={{height: "calc(100% - 20px)"}}>
             <FlexLayout direction="column" align="flex-start" margin="0 0 10px 10px">
-              <ChumHumIcon icon={coinData.icon} width="80px" height="80px"/>
-              <ChumHumText fontSize="20px" padding="20px 0 40px 15px">{coinData.coin}</ChumHumText>
+              <VenusIcon icon={coinData.icon} width="80px" height="80px"/>
+              <VenusText fontSize="20px" padding="20px 0 40px 15px">{coinData.coin}</VenusText>
             </FlexLayout>
             <FlexLayout justify="space-between" margin="0 0 40px 0">
               <InfoDisplay>
@@ -200,7 +200,7 @@ const Coin = ({coinType}) => {
                     <Tab className="no-background">Borrow</Tab>
                   </TabList>
                   <TabPanel>
-                    <ChumHumText fontSize="14px" align="right">APY</ChumHumText>
+                    <VenusText fontSize="14px" align="right">APY</VenusText>
                     <div style={{height: "150px"}}>
                       <ResponsiveContainer width="100%" height="100%">
                         <LineChart data={supplyAPYData} syncId="supply">
@@ -227,7 +227,7 @@ const Coin = ({coinType}) => {
                     </div>
                   </TabPanel>
                   <TabPanel>
-                    <ChumHumText fontSize="14px" align="right">APY</ChumHumText>
+                    <VenusText fontSize="14px" align="right">APY</VenusText>
                     <div style={{height: "150px"}}>
                       <ResponsiveContainer width="100%" height="100%">
                         <LineChart data={supplyAPYData} syncId="borrow">
@@ -298,8 +298,8 @@ const Coin = ({coinType}) => {
                       <div key={index}>
                         {index != 0 && <Divider />}
                         <FlexLayout justify="space-between" padding="14px 0">
-                          <ChumHumText fontSize="16px">{item.title}</ChumHumText>
-                          <ChumHumText fontSize="16px">{item.value}</ChumHumText>
+                          <VenusText fontSize="16px">{item.title}</VenusText>
+                          <VenusText fontSize="16px">{item.value}</VenusText>
                         </FlexLayout>
                       </div>
                     )

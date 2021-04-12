@@ -6,8 +6,8 @@ import { Box, Flex, Text } from 'rebass'
 import { withRouter } from 'react-router-dom'
 
 import theme from '../../../../theme'
-import { Row, Divider, ChumHumText, FlexLayout, PageTitle } from '../../../../components/styles'
-import ChumHumIcon from '../../../../components/ChumHumIcon'
+import { Row, Divider, VenusText, FlexLayout, PageTitle } from '../../../../components/styles'
+import VenusIcon from '../../../../components/VenusIcon'
 
 const OVERVIEW_TOKEN_BLACKLIST = [];
 
@@ -22,16 +22,16 @@ function TransactionList({ tokens }) {
 				<DataText area="action" fontWeight="500">
 					<Row>
 						<FlexLayout direction="column" align="flex-start">
-							<ChumHumText width="max-content">{item.action}</ChumHumText>
+							<VenusText width="max-content">{item.action}</VenusText>
 						</FlexLayout>
 					</Row>
 				</DataText>
 				<DataText area="age" justify="flex-start">
-					<ChumHumText>{item.age}</ChumHumText>
+					<VenusText>{item.age}</VenusText>
 				</DataText>
 				<DataText area="result">
-					<ChumHumIcon icon={item.icon} width="24px" height="24px" marginRight="20px" />
-					<ChumHumText>{item.result}</ChumHumText>
+					<VenusIcon icon={item.icon} width="24px" height="24px" marginRight="20px" />
+					<VenusText>{item.result}</VenusText>
 				</DataText>
 			</DashGrid>
 		)

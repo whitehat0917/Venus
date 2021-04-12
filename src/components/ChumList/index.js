@@ -7,8 +7,8 @@ import { withRouter } from 'react-router-dom'
 
 import theme from '../../theme'
 import { FlexLayout, Row } from '../styles'
-import { ChumHumText } from '../../components/styles'
-import ChumHumIcon from '../../components/ChumHumIcon'
+import { VenusText } from '../../components/styles'
+import VenusIcon from '../../components/VenusIcon'
 import xvsIcon from '../../assets/img/active-xvs.svg'
 
 const OVERVIEW_TOKEN_BLACKLIST = [];
@@ -127,18 +127,18 @@ function ChumList({ tokens }) {
       <DashGrid>
         <DataText area="market" fontWeight="500">
           <Row>
-            <ChumHumIcon icon={item.icon} width="24px" height="24px" marginRight="8px" />
-            <ChumHumText>{item.name}</ChumHumText>
+            <VenusIcon icon={item.icon} width="24px" height="24px" marginRight="8px" />
+            <VenusText>{item.name}</VenusText>
           </Row>
         </DataText>
         <DataText area="perday">
-          <ChumHumText>{item.perday}</ChumHumText>
+          <VenusText>{item.perday}</VenusText>
         </DataText>
         <DataText area="supplyapy">
-          <ChumHumText>{item.supplyapy}</ChumHumText>
+          <VenusText>{item.supplyapy}</VenusText>
         </DataText>
         <DataText area="borrowapy">
-          <ChumHumText>{item.borrowapy}</ChumHumText>
+          <VenusText>{item.borrowapy}</VenusText>
         </DataText>
       </DashGrid>
     )
@@ -148,13 +148,13 @@ function ChumList({ tokens }) {
     return (
       <FlexLayout justify="space-between" align="flex-start" padding="10px 0">
         <FlexLayout>
-          <ChumHumIcon icon={item.icon} width="24px" height="24px" marginRight="8px" />
-          <ChumHumText>{item.name}</ChumHumText>
+          <VenusIcon icon={item.icon} width="24px" height="24px" marginRight="8px" />
+          <VenusText>{item.name}</VenusText>
         </FlexLayout>
         <FlexLayout direction="column" align="flex-end">
-          <ChumHumText>{"Per day: " + item.perday}</ChumHumText>
-          <ChumHumText>{"Supply APY: " + item.supplyapy}</ChumHumText>
-          <ChumHumText>{"Borrow APY: " + item.borrowapy}</ChumHumText>
+          <VenusText>{"Per day: " + item.perday}</VenusText>
+          <VenusText>{"Supply APY: " + item.supplyapy}</VenusText>
+          <VenusText>{"Borrow APY: " + item.borrowapy}</VenusText>
         </FlexLayout>
       </FlexLayout>
     )
@@ -183,7 +183,7 @@ function ChumList({ tokens }) {
               setSortDirection(sortedColumn !== SORT_FIELD.PERDAY ? true : !sortDirection)
             }}
           >
-            <ChumHumIcon icon={xvsIcon} width="16px" height="16px" marginRight="8px" />
+            <VenusIcon icon={xvsIcon} width="16px" height="16px" marginRight="8px" />
             Per Day {sortedColumn === SORT_FIELD.PERDAY ? (!sortDirection ? '↑' : '↓') : ''}
           </ClickableText>
         </Flex>
@@ -196,7 +196,7 @@ function ChumList({ tokens }) {
             }}
           >
             Supply 
-            <ChumHumIcon icon={xvsIcon} width="16px" height="16px" marginLeft="8px" marginRight="8px" />
+            <VenusIcon icon={xvsIcon} width="16px" height="16px" marginLeft="8px" marginRight="8px" />
             Apy
             {sortedColumn === SORT_FIELD.SUPPLYAPY ? (!sortDirection ? '↑' : '↓') : ''}
           </ClickableText>
@@ -210,7 +210,7 @@ function ChumList({ tokens }) {
             }}
           >
             Borrow 
-            <ChumHumIcon icon={xvsIcon} width="16px" height="16px" marginLeft="8px" marginRight="8px" />
+            <VenusIcon icon={xvsIcon} width="16px" height="16px" marginLeft="8px" marginRight="8px" />
             Apy
             {sortedColumn === SORT_FIELD.BORROWAPY ? (!sortDirection ? '↑' : '↓') : ''}
           </ClickableText>

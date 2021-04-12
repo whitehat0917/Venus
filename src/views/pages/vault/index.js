@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Row, Col } from 'reactstrap';
 import InputBox from '../dashboard/inputbox'
-import { FlexLayout, ChumHumText, PageTitle, Container } from '../../../components/styles';
+import { FlexLayout, VenusText, PageTitle, Container } from '../../../components/styles';
 
 import XVS from '../../../assets/img/icons/xvs-icon.png'
 import VAI from '../../../assets/img/dashboard/vai-icon.svg'
@@ -36,8 +36,8 @@ const Vault = () => {
 										staticData.map((item, index) => {
 											return (
 												<Col md='3' className="mobile-mb-20" key={`__key-${index.toString()}`}>
-													<ChumHumText fontSize="1.3rem" color="#a1a1a1" align="left">{item.name}</ChumHumText>
-													<ChumHumText fontSize="1.5rem" margin="10px 0 0 0" align="left">{item.amount}</ChumHumText>
+													<VenusText fontSize="1.3rem" color="#a1a1a1" align="left">{item.name}</VenusText>
+													<VenusText fontSize="1.5rem" margin="10px 0 0 0" align="left">{item.amount}</VenusText>
 												</Col>
 											)
 										})
@@ -51,34 +51,34 @@ const Vault = () => {
 							<Container height="calc(100% - 20px)" padding='35px'>
 								<FlexLayout justify='space-between' direction='column' align='flex-start' height='100%'>
 									<div className='w-100'>
-										<ChumHumText fontSize="1.3rem" color="#a1a1a1" align="left">Available VAI to stake</ChumHumText>
+										<VenusText fontSize="1.3rem" color="#a1a1a1" align="left">Available VAI to stake</VenusText>
 										<FlexLayout className="mt-15" justify="flex-start">
 											<img src={VAI} className="w-30 mr-10" alt="vai" />
-											<ChumHumText fontSize="1.5rem" align="left">0 VAI</ChumHumText>
+											<VenusText fontSize="1.5rem" align="left">0 VAI</VenusText>
 										</FlexLayout>
 									</div>
 									<div className='w-100'>
-										<ChumHumText className="mt-40" fontSize="1.3rem" color="#a1a1a1" align="left">VAI Staked</ChumHumText>
+										<VenusText className="mt-40" fontSize="1.3rem" color="#a1a1a1" align="left">VAI Staked</VenusText>
 										<FlexLayout className="mt-15" justify="flex-start">
 											<img src={VAI} className="w-30 mr-10" alt="vai" />
-											<ChumHumText fontSize="1.5rem" align="left">0 VAI</ChumHumText>
+											<VenusText fontSize="1.5rem" align="left">0 VAI</VenusText>
 										</FlexLayout>
 									</div>
 									<div className='w-100'>
-										<ChumHumText className="mt-40" fontSize="1.3rem" color="#a1a1a1" align="left">Available VAI rewards</ChumHumText>
+										<VenusText className="mt-40" fontSize="1.3rem" color="#a1a1a1" align="left">Available VAI rewards</VenusText>
 										<FlexLayout className="mt-15" justify="space-between">
 											<FlexLayout justify="flex-start">
 												<img src={XVS} className="w-30 mr-10" alt="vai" />
-												<ChumHumText fontSize="1.5rem" align="left">0 XVS</ChumHumText>
+												<VenusText fontSize="1.5rem" align="left">0 XVS</VenusText>
 											</FlexLayout>
-											<ChumHumText fontSize="1.2rem" color="#a1a1a1" align="right">Claim</ChumHumText>
+											<VenusText fontSize="1.2rem" color="#a1a1a1" align="right">Claim</VenusText>
 										</FlexLayout>
 									</div>
 									<div className='w-100'>
-										<ChumHumText className="mt-40" fontSize="1.3rem" color="#a1a1a1" align="left">Venus Balance</ChumHumText>
+										<VenusText className="mt-40" fontSize="1.3rem" color="#a1a1a1" align="left">Venus Balance</VenusText>
 										<FlexLayout className="mt-15" justify="flex-start">
 											<img src={XVS} className="w-30 mr-10" alt="vai" />
-											<ChumHumText fontSize="1.5rem" align="left">0 XVS</ChumHumText>
+											<VenusText fontSize="1.5rem" align="left">0 XVS</VenusText>
 										</FlexLayout>
 									</div>
 								</FlexLayout>
@@ -87,18 +87,18 @@ const Vault = () => {
 						<Col md='7'>
 							<Container>
 								<Container backgroundColor='#090d27'>
-									<ChumHumText fontSi='1.2rem' fontWeight='normal'>Available VAI to stake: 0 VAI</ChumHumText>
+									<VenusText fontSi='1.2rem' fontWeight='normal'>Available VAI to stake: 0 VAI</VenusText>
 									<FlexLayout padding="10px 0">
 										<InputBox value={availableValue} handleChange={(e) => setAvailableValue(e.target.value)} />
-										<ChumHumText color="rgb(189, 189, 189)" cursor="pointer" onClick={() => handleMax()}>MAX</ChumHumText>
+										<VenusText color="rgb(189, 189, 189)" cursor="pointer" onClick={() => handleMax()}>MAX</VenusText>
 									</FlexLayout>
 									<button className='primary-button'>Enable</button>
 								</Container>
 								<Container backgroundColor='#090d27' margin="0">
-									<ChumHumText fontSi='1.2rem' fontWeight='normal'>VAI staked: 0 VAI</ChumHumText>
+									<VenusText fontSi='1.2rem' fontWeight='normal'>VAI staked: 0 VAI</VenusText>
 									<FlexLayout padding="10px 0">
 										<InputBox value={availableValue} handleChange={(e) => setAvailableValue(e.target.value)} />
-										<ChumHumText color="rgb(189, 189, 189)" cursor="pointer" onClick={() => handleMax()}>MAX</ChumHumText>
+										<VenusText color="rgb(189, 189, 189)" cursor="pointer" onClick={() => handleMax()}>MAX</VenusText>
 									</FlexLayout>
 									<button className='primary-button'>Enable</button>
 								</Container>

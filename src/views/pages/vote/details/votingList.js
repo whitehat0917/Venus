@@ -6,7 +6,7 @@ import { Col } from 'reactstrap'
 import { Box, Flex, Text } from 'rebass'
 import { withRouter, Redirect } from 'react-router-dom'
 import ChunHumProgress from '../../../../components/Progress'
-import { Row, Divider, ChumHumText, FlexLayout } from '../../../../components/styles'
+import { Row, Divider, VenusText, FlexLayout } from '../../../../components/styles'
 import greenIcon from '../../../../assets/img/check-icon-green.svg'
 import purpleIcon from '../../../../assets/img/check-icon-purple.svg'
 
@@ -26,10 +26,10 @@ function VotingList({ tokens }) {
 				<Row onClick={() => setUrl('/pages/vote/proposal/' + item.id)}>
 					<Col md='6'>
 						<FlexLayout direction="column" align="flex-start">
-							<ChumHumText fontSize="1.3rem">{item.title}</ChumHumText>
+							<VenusText fontSize="1.3rem">{item.title}</VenusText>
 							<FlexLayout padding="10px 0 0 0" justify="flex-start">
-								<ChumHumText color="#a1a1a1" fontWeight="normal">{item.subTitle}</ChumHumText>
-								<ChumHumText color={item.status === 'Passed' ? '#09d395' : '#ff4a21'} padding="0 0 0 10px">{item.status}</ChumHumText>
+								<VenusText color="#a1a1a1" fontWeight="normal">{item.subTitle}</VenusText>
+								<VenusText color={item.status === 'Passed' ? '#09d395' : '#ff4a21'} padding="0 0 0 10px">{item.status}</VenusText>
 							</FlexLayout>
 						</FlexLayout>
 					</Col>
@@ -46,7 +46,7 @@ function VotingList({ tokens }) {
 						<img src={item.iconValue === 0 ? greenIcon : purpleIcon} style={{ width: "30px" }} alt="check" />
 					</Col>
 					<Col md='2'>
-						<ChumHumText fontSize="1.3rem">{item.iconValue === 0 ? 'For' : 'Against'}</ChumHumText>
+						<VenusText fontSize="1.3rem">{item.iconValue === 0 ? 'For' : 'Against'}</VenusText>
 					</Col>
 				</Row>
 			</>

@@ -29,7 +29,7 @@ const data = [
     icon: xvsIcon,
     activeIcon: activexvsIcon,
     label: 'XVS',
-    to: '/pages/chum',
+    to: '/pages/venus',
   },
   {
     id: 'market',

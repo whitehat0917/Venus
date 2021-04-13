@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import InputBox from './inputbox'
-import ChunHumProgress from '../../../components/Progress'
+import VenusProgress from '../../../components/Progress'
 import { VenusText, FlexLayout, Container } from '../../../components/styles'
 import VenusButton from '../../../components/VenusButton';
 
@@ -114,7 +114,7 @@ const DashboardModal = ({ item, type, toggle, modal }) => {
 													</FlexLayout>
 													<VenusText fontWeight="normal" fontSize="1.1rem">0%</VenusText>
 												</FlexLayout>
-												<ChunHumProgress percent={0} width="100%"></ChunHumProgress>
+												<VenusProgress percent={0} width="100%"></VenusProgress>
 											</FlexLayout>
 										</>
 									}
@@ -165,7 +165,7 @@ const DashboardModal = ({ item, type, toggle, modal }) => {
 											</FlexLayout>
 											<VenusText fontWeight="normal" fontSize="1.1rem">0%</VenusText>
 										</FlexLayout>
-										<ChunHumProgress percent={10} width="100%"></ChunHumProgress>
+										<VenusProgress percent={10} width="100%"></VenusProgress>
 									</FlexLayout>
 									<VenusButton text={type === 'supply' ? 'Withdraw' : 'Borrow'} width="200px" />
 									<FlexLayout justify="space-between" padding="0.8rem 0">

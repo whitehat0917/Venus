@@ -89,7 +89,7 @@ const SORT_FIELD = {
 }
 
 // @TODO rework into virtualized list
-function ChumList({ tokens }) {
+function VenusList({ tokens }) {
   // sorting
   const [sortDirection, setSortDirection] = useState(true)
   const [sortedColumn, setSortedColumn] = useState(SORT_FIELD.PERDAY)
@@ -235,4 +235,4 @@ function ChumList({ tokens }) {
   )
 }
 
-export default withRouter(ChumList)
+export default withRouter(VenusList)

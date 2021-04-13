@@ -10,8 +10,8 @@ import {
 } from '../../../components/styles';
 import CopyHelper from '../../../components/Copy';
 import VenusIcon from '../../../components/VenusIcon';
-import ChunHumProgress from '../../../components/Progress';
-import ChumList from '../../../components/ChumList';
+import VenusProgress from '../../../components/Progress';
+import VenusList from '../../../components/VenusList';
 import { InfoDisplay } from './style';
 
 import xvsIcon from '../../../assets/img/active-xvs.svg'
@@ -164,7 +164,7 @@ const DataList = [
   },
 ]
 
-const Chum = () => {
+const Venus = () => {
   const below1080 = useMedia('(max-width: 1080px)')
 
   const address = "0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63"
@@ -194,7 +194,7 @@ const Chum = () => {
                 <p>21,038,479.68</p>
               </InfoDisplay>
             </FlexLayout>
-            <ChunHumProgress percent={10} width="250px"></ChunHumProgress>
+            <VenusProgress percent={10} width="250px"></VenusProgress>
           </FlexLayout>
         </Col>
       </Row>
@@ -202,7 +202,7 @@ const Chum = () => {
         <Col md="12">
           <Container>
             <VenusText fontSize="20px" align="left" margin="0 0 2rem 0">Market Distribution</VenusText>
-            <ChumList tokens={DataList} />
+            <VenusList tokens={DataList} />
           </Container>
         </Col>
       </Row>
@@ -210,4 +210,4 @@ const Chum = () => {
   )
 }
 
-export default Chum;
+export default Venus;

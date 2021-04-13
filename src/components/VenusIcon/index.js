@@ -12,7 +12,7 @@ const IconContainer = styled.div`
 const VenusIcon = ({ icon, width = "24px", height = "24px", marginLeft = "0", marginRight = "0" }) => {
   return (
     <IconContainer marginLeft={marginLeft} marginRight={marginRight}>
-      <img src={icon} alt="Chum" style={{width: width, height: height}} />
+      <img src={icon} alt="Venus" style={{width: width, height: height}} />
     </IconContainer>
   )
 }

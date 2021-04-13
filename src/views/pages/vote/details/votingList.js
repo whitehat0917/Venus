@@ -5,7 +5,7 @@ import { Col } from 'reactstrap'
 
 import { Box, Flex, Text } from 'rebass'
 import { withRouter, Redirect } from 'react-router-dom'
-import ChunHumProgress from '../../../../components/Progress'
+import VenusProgress from '../../../../components/Progress'
 import { Row, Divider, VenusText, FlexLayout } from '../../../../components/styles'
 import greenIcon from '../../../../assets/img/check-icon-green.svg'
 import purpleIcon from '../../../../assets/img/check-icon-purple.svg'
@@ -35,10 +35,10 @@ function VotingList({ tokens }) {
 					</Col>
 					<Col md='3'>
 						<FlexLayout direction="column">
-							<ChunHumProgress percent={item.greenAmount} width="90%" progressColor="#09d395" backgroundColor="transparent"></ChunHumProgress>
+							<VenusProgress percent={item.greenAmount} width="90%" progressColor="#09d395" backgroundColor="transparent"></VenusProgress>
 							{
 								item.purpleAmount !== '0' &&
-								<ChunHumProgress percent={item.purpleAmount} width="90%" progressColor="#906de5" backgroundColor="transparent"></ChunHumProgress>
+								<VenusProgress percent={item.purpleAmount} width="90%" progressColor="#906de5" backgroundColor="transparent"></VenusProgress>
 							}
 						</FlexLayout>
 					</Col>

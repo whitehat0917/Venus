@@ -21,8 +21,8 @@ const Dashboard = React.lazy(() =>
   import('./dashboard')
 );
 
-const Chum = React.lazy(() =>
-  import('./chum')
+const Venus = React.lazy(() =>
+  import('./venus')
 );
 
 const Vote = React.lazy(() =>
@@ -65,8 +65,8 @@ const App = ({ match }) => {
               render={(props) => <Dashboard {...props} />}
             />
             <Route 
-              path={`${match.url}/chum`}
-              render={(props) => <Chum {...props} />}
+              path={`${match.url}/venus`}
+              render={(props) => <Venus {...props} />}
             />
             <Route 
               exacts

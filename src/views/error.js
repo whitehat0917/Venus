@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Row, Card, CardTitle, Button } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import IntlMessages from '../helpers/IntlMessages';
+// import IntlMessages from '../helpers/IntlMessages';
 
 const Error = () => {
   useEffect(() => {
@@ -29,12 +29,12 @@ const Error = () => {
                   <NavLink to="/" className="white">
                     <span className="logo-single" />
                   </NavLink>
-                  <CardTitle className="mb-4">
+                  {/* <CardTitle className="mb-4">
                     <IntlMessages id="pages.error-title" />
-                  </CardTitle>
-                  <p className="mb-0 text-muted text-small mb-0">
+                  </CardTitle> */}
+                  {/* <p className="mb-0 text-muted text-small mb-0">
                     <IntlMessages id="pages.error-code" />
-                  </p>
+                  </p> */}
                   <p className="display-1 font-weight-bold mb-5">404</p>
                   <Button
                     href="/pages"
@@ -42,7 +42,8 @@ const Error = () => {
                     className="btn-shadow"
                     size="lg"
                   >
-                    <IntlMessages id="pages.go-back-home" />
+                    Back
+                    {/* <IntlMessages id="pages.go-back-home" /> */}
                   </Button>
                 </div>
               </Card>
